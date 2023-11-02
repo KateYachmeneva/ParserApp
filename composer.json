@@ -1,0 +1,16 @@
+{
+    "require": {
+        "clue/buzz-react": "^2.9",
+        "imangazaliev/didom": "^2.0",
+        "symfony/dom-crawler": "^6.3",
+        "php-webdriver/webdriver": "^1.15",
+        "react/event-loop": "^1.4"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+        ,
+        "phpunit/phpunit": "^10.4",
+        "symfony/panther": "^2.1",
+        "barryvdh/laravel-ide-helper": "^2.13"
+    }
+}
