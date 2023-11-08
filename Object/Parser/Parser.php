@@ -41,22 +41,20 @@ class Parser extends PantherTestCaseAlias  {
 
     private function parseDOM(string $html)
     {
-        $document = new \DiDom\Document($html);
-        $title = $document->first('div.footer-text')->text();
-
-//        $alternativeHeadline = $document->first('div.result-logo');
-//        $tableRows = $document->find('table.info tr');
-//        $year = $tableRows[0]->first('a')->text(); // 2019
-//        $country = $tableRows[1]->first('a')->text(); // США
-
-
-        return [
-            'title'             => $title,
-//            'alternative_title' => $alternativeHeadline,
-//            'year'              => $year,
-//            'country'           => $country,
-//            'time'              => $time,
-//            'rating'            => $rating,
+        $lines = explode("\n", $html);
+        $substring = "tsargradtv";
+// Проходим по каждой строке и извлекаем данные
+        foreach ($lines as $index => $string) {
+            if (strpos($string, $substring) !== false) {
+                // Элемент содержит подстроку "tsargradtv"
+                echo "Наше место: $index, Элемент: $string";
+                // Вы можете выполнить другие действия с этим элементом, если необходимо
+            }
+        }
+    $chanels = $lines;
+//    var_dump($chanels);
+       return [
+            'chanels'  => $chanels,
         ];
     }
 
